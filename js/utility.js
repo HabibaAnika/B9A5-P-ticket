@@ -111,12 +111,12 @@ function grandTotal() {
 function couponInput(id) {
     const firstCoupon = 'NEW15';
     const lastCoupon = 'Couple 20';
-    let coupon = document.getElementById('coupon').value;
     let inputBtn = document.getElementById(id);
     inputBtn.addEventListener('click', function () {
-        if (coupon === firstCoupon && coupon === lastCoupon) {
-            const inputField = document.getElementById('parent');
-            inputField.classList.add('hidden');
+        let coupon = document.getElementById('coupon').value;
+        if (coupon === firstCoupon || coupon === lastCoupon) {
+            const inputField = document.getElementById('coupon-input');
+            inputField.style.display = "none"
         }
     })
 }
